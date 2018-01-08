@@ -1692,9 +1692,7 @@ initSteem():
 * Initialize steem, test API connection and get minimal required data
 */
 function initSteem(callback) {
-  // #50, fix Websocket address, server has migrated to new URL
-  //steem.api.setWebSocket('wss://steemd.steemit.com');
-  // #71, no longer need to set this
+  steem.api.setWebSocket('wss://rpc.steemviz.com');
   var processes = [
     function() {
       var deferred = Q.defer();
